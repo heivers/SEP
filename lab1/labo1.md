@@ -71,5 +71,76 @@ To re-install virtualbox, run:
 🍺  mysqlworkbench was successfully installed!
 ```
 
+## Windows
+
+### Vragen
+- **Powershell Prompt**: c:\windows\system32
+- **Mijn script**: \\\wsl.localhost\Ubuntu-22.04\home\barthk012\mystuff\hogent\SEP\lab1\windows
+- **Script in Screenshot**: D:\Users\BertVV\Documents\HoGent\SELab\Installatie.ps1
+
+### Chocolatey
+*gebruik ik persoonlijk al langer als package manager*
+
+| Taak | Commando |
+|------|-----------|
+| Een lijst tonen van de software die nu geinstalleerd is via chocolatey | choco list -l |
+| Alle packages die nu geinstalleerd zijn bijwerken tot de laatste versie | choco upgrade all |
+| Via de console een package opzoeken | choco find "name" of choco search "name" |
+| Een geinstalleerde applicatie verwijderen | choco uninstall "name" |
+
+#### Script
+
+```powershell
+# Automatiseren software-installatie
+
+Write-Host "Installatie SEL applicaties" 
+
+choco install filezilla -y
+choco install mysql.workbench -y
+```
+
+#### Result
+
+```Powershell
+PS C:\WINDOWS\system32> \\wsl.localhost\Ubuntu-22.04\home\barthk012\mystuff\hogent\SEP\lab1\windows\installatie.ps1
+Installatie SEL applicaties
+Chocolatey v1.3.0
+Installing the following packages:
+filezilla
+By installing, you accept licenses for the packages.
+Progress: Downloading filezilla 3.63.2... 100%
+
+filezilla v3.63.2 [Approved]
+filezilla package files install completed. Performing other installation steps.
+Installing 64-bit filezilla...
+filezilla has been installed.
+  filezilla may be able to be automatically uninstalled.
+ The install of filezilla was successful.
+  Software installed to 'C:\Program Files\FileZilla FTP Client'
+
+Chocolatey installed 1/1 packages.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+Chocolatey v1.3.0
+Installing the following packages:
+mysql.workbench
+By installing, you accept licenses for the packages.
+Progress: Downloading mysql.workbench 8.0.31... 100%
+
+mysql.workbench v8.0.31 [Approved]
+mysql.workbench package files install completed. Performing other installation steps.
+Downloading mysql.workbench
+  from 'https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-8.0.31-winx64.msi'
+Progress: 100% - Completed download of C:\Users\bart_\AppData\Local\Temp\chocolatey\mysql.workbench\8.0.31\mysql-workbench-community-8.0.31-winx64.msi (44.62 MB).
+Download of mysql-workbench-community-8.0.31-winx64.msi (44.62 MB) completed.
+Hashes match.
+Installing mysql.workbench...
+mysql.workbench has been installed.
+  mysql.workbench may be able to be automatically uninstalled.
+ The install of mysql.workbench was successful.
+  Software installed as 'msi', install location is likely default.
+
+Chocolatey installed 1/1 packages.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+ ```
 
 
