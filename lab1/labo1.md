@@ -1,4 +1,4 @@
-# labo 1
+# labo 1 (Bart Heerkens)
 
 ## Linux
 
