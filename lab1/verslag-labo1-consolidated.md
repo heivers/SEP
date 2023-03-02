@@ -224,3 +224,40 @@ mysql.workbench has been installed.
 Chocolatey installed 1/1 packages.
  See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
  ```
+***
+
+## Student: Isaak Biebuyck
+
+### Taken:
+
+- Een lijst tonen van de software die nu geïnstalleerd via Chocolatey
+  - Commando: Choco List
+
+- Alle packages die nu geïnstalleerd zijn bijwerken tot de laatste versie
+
+  - Commando: Choco Upgrade
+
+- Via de console een package opzoeken
+
+  - Commando: Choco Find “name”
+
+- Een geïnstalleerde applicatie verwijderen
+  - Commando: Choco Uninstall “name”
+
+### Besturingssysteem: Windows 11
+
+#### Problemen:
+
+Powershell voerde het script niet zoals verwacht uit doordat ik foute commando’s gebruikt had in verschillende plekken, gelukkig vond ik de nodige hulp online om zo de juiste commando’s in te voeren en het gewenste eindresultaat te bekomen.
+
+#### Script voor het automatiseren van software installaties:
+
+```Powershell
+Write-Host "Installatie applicaties"
+
+choco install -y git
+choco install -y adobe-acrobate.reader
+choco install -y vscode
+choco install -y virtualbox
+choco install -y mysql.workbench
+```
