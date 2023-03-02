@@ -1,8 +1,90 @@
-# labo 1 (Bart Heerkens)
+# Labo 1 - Verslag
 
-## Linux
+## Student: Lukrecja Blaszcyk
+### Problemen en oplossingen
 
-![Alt text](linux/linux_bash_script.png "Screenshot terminal")
+Tijdens het uitvoeren van de opdracht wou Powershell eerst mijn script niet uitvoeren. Na het doornemen van de instructies probeerde ik het Policy-commando in te voeren maar in het verkeerde venster. Na enig denkwerk en met de hulp van de instructies loste ik het probleem zelf op. Dat was het enig probleem dat ik ben tegen gekomen tijdens het uitvoeren van de opdracht.
+
+### Taken:
+
+1. Een lijst tonen van de software die nu geïnstalleerd via Chocolatey
+	1. Choco List
+2. Alle packages die nu geïnstalleerd zijn bijwerken tot de laatste versie
+	1. Choco Upgrade
+3. Via de console een package opzoeken
+	1. Choco Find
+4. Een geïnstalleerde applicatie verwijderen
+	1. Choco Uninstall
+
+### Installatiescript
+```
+# Automatiseren software-installatie
+Write-Host "Installatie algemene applicaties"
+choco install -y git
+choco install -y adobereader
+choco install -y firefox
+choco install -y github-desktop
+choco install -y vscode
+choco install -y vlc
+Write-Host "Software voor System Engineering Lab"
+choco install -y filezilla
+choco install -y virtualbox
+choco install -y mysql.workbench
+```
+***
+## Student: Azra Capan
+
+### windows
+
+---
+
+#### Problemen en oplossingen
+
+Tijdens mijn labo wou powershell mijn script niet uitvoeren, de commando "Set-ExecutionPolicyBypass-ScopeProcess" heeft me hierbij geholpen.
+
+---
+
+##### Vragen
+
+- promt: c:\windows\system32
+- mijn script: C:\Users\capan\OneDrive - Hogeschool Gent\SELAB\Untitled1.ps1
+- Script in screenshot: D:\Users\BertVV\Documents\HoGent\SELab\Installatie.ps1
+
+---
+
+#### Chocolaty
+
+- Een lijst tonen van de software die nu geïnstalleerd via Chocolatey
+  : Choco List-l
+- Alle packages die nu geïnstalleerd zijn bijwerken tot de laatste versie
+  : Choco Upgrade all
+- Via de console een package opzoeken
+  : Choco Find "name"
+- Een geïnstalleerde applicatie verwijderen
+  : Choco Uninstal "name"
+
+  ***
+
+#### Automatiseren software-installatie
+
+```Write-Host "Installatie algemene applicaties"
+
+choco install -y git
+
+choco install -y MySQL Workbench
+
+choco install -y Visual Studio Code
+
+choco install -y VirtualBox
+
+choco install -y Adobe Acrobat Reader
+```
+
+***
+
+## Student: Bart Heerkens
+
+### Linux
 
 
 | Taak | Commando |
@@ -12,7 +94,7 @@
 | Via de console een package opzoeken | apt list "name" -a |
 | Een geinstalleerde applicatie verwijderen | sudo apt remove "name" |
 
-### Script
+#### Script
 
 Aangezien Linux in WSL loopt en vooral Windows of evtl. MacOS voor SEL gaan gebruikt worden. Een verkorte versie van het script:
 
@@ -27,9 +109,9 @@ echo "=== Algemene applicaties ==="
 echo "### Nothing to install now ###"
 ```
 
-## Mac
+### Mac
 
-### Script
+#### Script
 
 ```bash
 #! /bin/bash
@@ -41,7 +123,7 @@ brew install --cask virtualbox
 brew install --cask cyberduck
 brew install --cask mysqlworkbench
 ````
-### resultaat
+#### resultaat
 
 ```bash
 (base) barts-mbp:macOS bartheerkens$ ./installatie.sh 
@@ -71,14 +153,14 @@ To re-install virtualbox, run:
 🍺  mysqlworkbench was successfully installed!
 ```
 
-## Windows
+### Windows
 
-### Vragen
+#### Vragen
 - **Powershell Prompt**: c:\windows\system32
 - **Mijn script**: \\\wsl.localhost\Ubuntu-22.04\home\barthk012\mystuff\hogent\SEP\lab1\windows
 - **Script in Screenshot**: D:\Users\BertVV\Documents\HoGent\SELab\Installatie.ps1
 
-### Chocolatey
+#### Chocolatey
 *gebruik ik persoonlijk al langer als package manager*
 
 | Taak | Commando |
@@ -99,7 +181,7 @@ choco install filezilla -y
 choco install mysql.workbench -y
 ```
 
-#### Result
+#### Resultaat
 
 ```Powershell
 PS C:\WINDOWS\system32> \\wsl.localhost\Ubuntu-22.04\home\barthk012\mystuff\hogent\SEP\lab1\windows\installatie.ps1
@@ -142,5 +224,3 @@ mysql.workbench has been installed.
 Chocolatey installed 1/1 packages.
  See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
  ```
-
-
