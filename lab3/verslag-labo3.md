@@ -71,6 +71,7 @@ side note: Ubuntu heeft zelfs een lamp package omdat het zoveel gebruikt wordt.
 
 - Configuratie van fail2ban
   - enkel Jail voor ssh in config file gelaten
+- |attribuut|uitleg|
   |----|----|
   |findtime|de tijdspanne waarbinnen maxretries geldt. bv: findtime 10m, maxretries: 10. Als binnen 10 minuten meer als 10 keer een ongeldige actie plaatsvindt, word gebanned|
   |maxretry|max. aantal herhalingen binnen findtime|
@@ -86,6 +87,7 @@ side note: Ubuntu heeft zelfs een lamp package omdat het zoveel gebruikt wordt.
     - ssh vboxuser@192.168.56.20 -> ok
     - na 6 foute pogingen: gebeurd niks, bij volgende verbinding -> Connection refused
   - Fail2Ban command line:
+- |vragen|commando|
   |------|--------|
   |geconfigureerde jails| sudo fail2ban-client status|
   |Welke ip adressen geblokkeerd| sudo fail2ban-client banned|
